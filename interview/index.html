@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart Interview Questions</title>
+    <meta name="description" content="Walmart interview questions and tips.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#e6f2ff', 100: '#b3d9ff', 200: '#80bfff',
+                            500: '#0071ce', 600: '#0071ce', 700: '#005a9e', 900: '#004170'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Site Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex items-center justify-between h-16">
+            <a href="../index.html" class="text-xl font-bold text-gray-900">employers.io</a>
+            <nav class="hidden lg:flex items-center gap-6">
+                <a href="../jobs/index.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">Jobs</a>
+                <a href="../salaries/index.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">Salaries</a>
+                <a href="../reviews/index.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">Reviews</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CompanyHero -->
+    <section class="py-8" style="background-color: #0071ce; color: white;">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <div class="flex items-center gap-6">
+                <div class="bg-white p-4 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 flex items-center justify-center">
+                        <span class="text-3xl font-bold" style="color: #0071ce;">W</span>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold">Walmart</h1>
+                    <p class="text-lg opacity-90 mt-1">Interview Questions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NavTabsCompany -->
+    <nav class="bg-white border-b border-gray-200 sticky top-16 z-40">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <div class="flex space-x-8 overflow-x-auto items-center">
+                <a href="../index.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Overview</a><a href="../jobs/index.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Jobs</a><a href="../salaries/index.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Salaries</a><a href="../reviews/index.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Reviews</a><a href="../benefits.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Benefits</a>
+                <!-- Insights Dropdown -->
+                <div class="relative" id="insights-dropdown">
+                    <button onclick="document.getElementById('insights-menu').classList.toggle('hidden')" class="border-primary-600 text-primary-600 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium inline-flex items-center gap-1">
+                        Insights
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="insights-menu" class="hidden absolute left-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                        <a href="../hiring-process/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Hiring Process</a><a href="../interview/index.html" class="block px-4 py-2 text-sm bg-primary-50 text-primary-600">Interview Questions</a><a href="../drug-test/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Drug Test</a><a href="../hiring-process/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Background Check</a><a href="../index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Age Requirements</a><a href="../schedule/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Schedule</a><a href="../dress-code/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dress Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            var dropdown = document.getElementById('insights-dropdown');
+            var menu = document.getElementById('insights-menu');
+            if (dropdown && menu && !dropdown.contains(e.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <main class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8">
+        <nav class="py-3"><div class="text-sm"><a href="../index.html" class="text-primary-600 hover:underline">Walmart</a><span class="mx-2 text-gray-400">/</span><span class="text-gray-500">Interview</span></div></nav>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-6">
+                <section class="bg-white rounded-xl shadow-sm p-6 md:p-8">
+                    <h1 class="text-2xl font-bold text-gray-900 mb-4">Walmart Interview Process</h1>
+                    <p class="text-gray-600 mb-4">Most interviews are in-person, lasting 15-30 minutes.</p>
+                    <div class="grid sm:grid-cols-3 gap-4 mt-6">
+                        <div class="text-center p-4 bg-gray-50 rounded-lg"><p class="font-semibold">Format</p><p class="text-sm text-gray-600">In-Person</p></div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg"><p class="font-semibold">Duration</p><p class="text-sm text-gray-600">15-30 mins</p></div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg"><p class="font-semibold">Rounds</p><p class="text-sm text-gray-600">1-2</p></div>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-xl shadow-sm p-6 md:p-8">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">Common Questions</h2>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-gray-50 rounded-lg"><p class="font-medium">"Why do you want to work at Walmart?"</p></div>
+                        <div class="p-4 bg-gray-50 rounded-lg"><p class="font-medium">"Tell me about a time you provided excellent customer service."</p></div>
+                        <div class="p-4 bg-gray-50 rounded-lg"><p class="font-medium">"How would you handle a difficult customer?"</p></div>
+                        <div class="p-4 bg-gray-50 rounded-lg"><p class="font-medium">"What is your availability?"</p></div>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-xl shadow-sm p-6 md:p-8">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">STAR Method</h2>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="p-4 border border-gray-200 rounded-lg"><p class="font-bold text-primary-600">S - Situation</p><p class="text-sm text-gray-600 mt-1">Set the scene</p></div>
+                        <div class="p-4 border border-gray-200 rounded-lg"><p class="font-bold text-primary-600">T - Task</p><p class="text-sm text-gray-600 mt-1">Your responsibility</p></div>
+                        <div class="p-4 border border-gray-200 rounded-lg"><p class="font-bold text-primary-600">A - Action</p><p class="text-sm text-gray-600 mt-1">What you did</p></div>
+                        <div class="p-4 border border-gray-200 rounded-lg"><p class="font-bold text-primary-600">R - Result</p><p class="text-sm text-gray-600 mt-1">The outcome</p></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="space-y-6">
+                <section class="bg-white rounded-xl shadow-sm p-6">
+                    <h3 class="font-bold text-gray-900 mb-4">By Position</h3>
+                    <div class="space-y-1"><a href="../interview/cashier.html" class="block py-2 text-primary-600 hover:underline">Cashier</a><a href="../interview/stocker.html" class="block py-2 text-primary-600 hover:underline">Stocker</a><a href="../interview/cart-attendant.html" class="block py-2 text-primary-600 hover:underline">Cart Attendant</a><a href="../interview/pharmacy-technician.html" class="block py-2 text-primary-600 hover:underline">Pharmacy Technician</a><a href="../interview/store-manager.html" class="block py-2 text-primary-600 hover:underline">Store Manager</a></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-12 py-8 border-t border-gray-200">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <p class="text-sm text-gray-500"><em>This information is compiled from publicly available sources. Actual salaries, benefits, and policies may vary.</em></p>
+        </div>
+    </footer>
+</body>
+</html>
