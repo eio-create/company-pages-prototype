@@ -17,6 +17,26 @@
             }
         }
     </script>
+    <style>
+        /* Table hover effects */
+        tbody tr:hover { background-color: #f0fdf4 !important; }
+        tbody tr:hover td { background-color: transparent !important; }
+        tbody tr { transition: background-color 0.15s ease; }
+
+        /* Hide scrollbar but allow scrolling */
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+        /* Improved H1 styling */
+        h1 { letter-spacing: -0.025em; }
+
+        /* Card hover effects */
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+        /* Mobile menu animation */
+        #mobile-menu { transition: max-height 0.3s ease; }
+    </style>
     <script>
     (function() {
         var pwd = 'employers007';
@@ -43,6 +63,33 @@
                 <a href="../../../salaries/index.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">Salaries</a>
                 <a href="../../../reviews/index.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">Reviews</a>
             </nav>
+            <!-- Mobile menu button -->
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200 bg-white">
+            <div class="px-4 py-3 space-y-1">
+                <a href="../../../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Overview</a>
+                <a href="../../../jobs/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Jobs</a>
+                <a href="../../../salaries/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Salaries</a>
+                <a href="../../../reviews/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Reviews</a>
+                <a href="../../../benefits.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Benefits</a>
+                <div class="border-t border-gray-200 mt-2 pt-2">
+                    <p class="px-3 py-1 text-xs font-semibold text-gray-500 uppercase tracking-wider">Insights</p>
+                    <a href="../../../hiring-process.html" class="block px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100">Hiring Process</a>
+                    <a href="../../../interview-questions.html" class="block px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100">Interview Questions</a>
+                    <a href="../../../application.html" class="block px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100">Application</a>
+                    <a href="../../../background-check.html" class="block px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100">Background Check</a>
+                    <a href="../../../drug-test-policy.html" class="block px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100">Drug Test Policy</a>
+                    <a href="../../../age-requirements.html" class="block px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100">Age Requirements</a>
+                    <a href="../../../dress-code.html" class="block px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100">Dress Code</a>
+                    <a href="../../../schedule.html" class="block px-3 py-2 rounded-md text-sm text-gray-600 hover:bg-gray-100">Schedule</a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -63,21 +110,40 @@
     </section>
 
     <style>
-        details.insights-dropdown > summary { list-style: none; cursor: pointer; }
-        details.insights-dropdown > summary::-webkit-details-marker { display: none; }
-        details.insights-dropdown[open] > summary { color: #006b52 !important; border-color: #006b52 !important; }
+        details.more-dropdown > summary { list-style: none; cursor: pointer; }
+        details.more-dropdown > summary::-webkit-details-marker { display: none; }
+        details.more-dropdown[open] > summary { color: #006b52 !important; border-color: #006b52 !important; }
     </style>
-    <nav class="bg-white border-b border-gray-200 sticky top-16 z-40">
+    <nav class="bg-white border-b border-gray-200 sticky top-16 z-40 shadow-sm">
         <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-            <div class="flex space-x-8 items-center">
-                <a href="../../../index.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Overview</a><a href="../../../jobs/index.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Jobs</a><a href="../../../salaries/index.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Salaries</a><a href="../../../reviews/index.html" class="border-primary-600 text-primary-600 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Reviews</a><a href="../../../benefits.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Benefits</a>
-                <details class="insights-dropdown relative">
-                    <summary class="border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium inline-flex items-center gap-1">
-                        Insights
+            <div class="flex space-x-6 lg:space-x-8 items-center overflow-x-auto scrollbar-hide">
+                <a href="../../../index.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium transition-colors">Overview</a><a href="../../../jobs/index.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium transition-colors">Jobs</a><a href="../../../salaries/index.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium transition-colors">Salaries</a><a href="../../../reviews/index.html" class="border-primary-600 text-primary-600 font-semibold whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium transition-colors">Reviews</a><a href="../../../benefits.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium transition-colors">Benefits</a><a href="../../../hiring-process.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium transition-colors">Hiring</a><a href="../../../interview-questions.html" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium transition-colors">Interview</a>
+                <details class="more-dropdown relative">
+                    <summary class="border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium inline-flex items-center gap-1 transition-colors">
+                        More
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </summary>
-                    <div class="absolute left-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                        <a href="../../../hiring-process.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Hiring Process</a><a href="../../../interview-questions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Interview Questions</a><a href="../../../application.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Application</a><a href="../../../background-check.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Background Check</a><a href="../../../drug-test-policy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Drug Test Policy</a><a href="../../../age-requirements.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Age Requirements</a><a href="../../../dress-code.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dress Code</a><a href="../../../schedule.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Schedule</a>
+                    <div class="absolute right-0 top-full mt-1 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                        <p class="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Policies & Info</p>
+                        <a href="../../../application.html" class="block px-4 py-3 hover:bg-gray-50 border-l-2 border-transparent transition-colors">
+            <span class="block text-sm font-medium text-gray-900">Application</span>
+            <span class="block text-xs text-gray-500">How to apply</span>
+        </a><a href="../../../background-check.html" class="block px-4 py-3 hover:bg-gray-50 border-l-2 border-transparent transition-colors">
+            <span class="block text-sm font-medium text-gray-900">Background Check</span>
+            <span class="block text-xs text-gray-500">What to expect</span>
+        </a><a href="../../../drug-test-policy.html" class="block px-4 py-3 hover:bg-gray-50 border-l-2 border-transparent transition-colors">
+            <span class="block text-sm font-medium text-gray-900">Drug Test</span>
+            <span class="block text-xs text-gray-500">Testing policies</span>
+        </a><a href="../../../age-requirements.html" class="block px-4 py-3 hover:bg-gray-50 border-l-2 border-transparent transition-colors">
+            <span class="block text-sm font-medium text-gray-900">Age Requirements</span>
+            <span class="block text-xs text-gray-500">Minimum age by role</span>
+        </a><a href="../../../dress-code.html" class="block px-4 py-3 hover:bg-gray-50 border-l-2 border-transparent transition-colors">
+            <span class="block text-sm font-medium text-gray-900">Dress Code</span>
+            <span class="block text-xs text-gray-500">What to wear</span>
+        </a><a href="../../../schedule.html" class="block px-4 py-3 hover:bg-gray-50 border-l-2 border-transparent transition-colors">
+            <span class="block text-sm font-medium text-gray-900">Schedule</span>
+            <span class="block text-xs text-gray-500">Shifts & hours</span>
+        </a>
                     </div>
                 </details>
             </div>
