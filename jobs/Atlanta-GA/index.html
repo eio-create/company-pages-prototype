@@ -20,13 +20,13 @@
     <script>
     (function() {
         var pwd = 'employers007';
-        if (sessionStorage.getItem('auth') !== pwd) {
-            var input = prompt('Enter password to view this site:');
-            if (input !== pwd) {
-                document.body.innerHTML = '<div style="text-align:center;padding:100px;font-family:sans-serif;"><h1>Access Denied</h1><p>Incorrect password.</p></div>';
-                throw new Error('Access denied');
-            }
-            sessionStorage.setItem('auth', pwd);
+        if (localStorage.getItem('eio_auth') === 'true') return;
+        var input = prompt('Enter password:');
+        if (input === pwd) {
+            localStorage.setItem('eio_auth', 'true');
+        } else {
+            document.write('<html><body style="text-align:center;padding:100px;font-family:sans-serif;"><h1>Access Denied</h1><p>Wrong password. Refresh to try again.</p></body></html>');
+            document.close();
         }
     })();
     </script>
